@@ -22,7 +22,7 @@ function round() {
 }
 
 function endGame() {
-  // FIXME: спрятать игровое поле сначала
+  $('.game-field').hide();
 
   let totalPlayedMillis = getTimestamp() - firstHitTime;
   let totalPlayedSeconds = Number(totalPlayedMillis / 1000).toPrecision(3);
