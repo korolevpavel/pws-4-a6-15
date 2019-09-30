@@ -7,6 +7,7 @@ let firstHitTime = 0;
 function round() {
   
   $('.target').removeClass('target');
+  $('.target').removeClass('miss');
 
   let divSelector = randomDivId();
   $(divSelector).addClass("target");
@@ -39,7 +40,9 @@ function handleClick(event) {
     target.text('');
     round();
   }
-  // TODO: как-то отмечать если мы промахнулись? См CSS класс .miss
+  else {
+    $(event.target).addClass('miss');
+  }
 }
 
 function init() {
