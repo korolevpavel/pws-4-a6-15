@@ -5,7 +5,8 @@ let hits = 0;
 let firstHitTime = 0;
 
 function round() {
-  // FIXME: надо бы убрать "target" прежде чем искать новый
+  
+  $('.target').removeClass('target');
 
   let divSelector = randomDivId();
   $(divSelector).addClass("target");
